@@ -1,0 +1,67 @@
+$gris: #3C3D3D;
+.row-eq-height {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+.no-gutter > [class*='col-'] {
+    padding-right: 0;
+    padding-left: 0;
+}
+body {
+    padding: 50px 0;
+    >.container {
+        max-width: 800px;
+    }
+    header {
+        padding: 30px 0;
+    }
+    #mushroom{
+      background-image: url("../img/mushroom.png");
+    }
+    .grid {
+        padding: 15px 0;
+        >.row {
+            margin: 10px 0;
+            >div[class^='col-'] {}
+            >div:first-child {
+                padding-right: 5px;
+            }
+            >div:last-child {
+                padding-left: 5px;
+            }
+        }
+    }
+    .single {
+        min-height: 100px;
+    }
+    .single .manel {
+        height: 100%;
+    }
+    .double .manel {
+        height: calc((100% - 10px) / 2);
+        margin-bottom: 10px;
+    }
+    .gris100 {
+        background-color: $gris;
+    }
+    .gris70 {
+        background-color: lighten($gris, 30);
+    }
+    .gris50 {
+        background-color: lighten($gris, 50);
+    }
+    .gris20 {
+        background-color: lighten($gris, 80);
+    }
+    .main {}
+    .udacity-logo {
+        border: 10px solid #ff9528;
+        border-radius: 50%;
+        max-width: 130px;
+    }
+    img {
+        max-width: 100%;
+    }
+}

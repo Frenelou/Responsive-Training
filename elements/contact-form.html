@@ -1,0 +1,41 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-form/iron-form.html">
+<link rel="import" href="../bower_components/paper-input/paper-input.html">
+
+<dom-module id="contact-form">
+    <template>
+
+        <form is="iron-form" id="form" method="post" action="/">
+
+            <paper-input label="this input requires some text" required auto-validate error-message="needs some text!"></paper-input>
+
+            <paper-input label="this input requires letters only" auto-validate pattern="[a-zA-Z]*" error-message="letters only!"></paper-input>
+
+            <paper-input label="this input will only let you type letters" auto-validate allowed-pattern="[a-zA-Z]"></paper-input>
+
+            <paper-input id="inputForValidation" required label="this input is manually validated" pattern="[a-zA-Z]*" error-message="letters only!"></paper-input>
+
+            <button class="btn btn-success" onclick="update()">Validate!</button>
+
+        </form>
+    </template>
+    <div id="output"></div>
+    <script>
+
+        Polymer({
+            is: "contact-form"
+        });
+
+        function update() {
+            var output = document.getElementById('output');
+            var elements = document.getElementById('form').elements;
+            document.getElementById('output').innerHTML = '';
+            for (var i = 0; i < elements.length; i++) {
+                var li = document.createElement('li');
+                var text = document.createTextNode(elements[i].value);
+                li.appendChild(text);
+                output.appendChild(li);
+            }
+        }
+    </script>
+</dom-module>
