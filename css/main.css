@@ -35,23 +35,94 @@ body > * > .container {
   max-width: 800px;
 }
 
-body header,
+body nav.navbar .navbar-header {
+  width: 100%;
+}
+
+body nav.navbar .udacity-logo {
+  border: 5px solid #ff9528;
+  border-radius: 50%;
+  display: inline;
+  height: 100%;
+  max-width: 100px;
+  padding: 0;
+}
+
+body nav.navbar .navbar-toggle {
+  margin-top: 15px;
+}
+
+body nav.navbar .navbar-toggle, body nav.navbar .navbar-toggle * {
+  border: 1px solid orange;
+}
+
+@media (max-width: 767px) {
+  body nav.navbar .navbar-header {
+    position: absolute;
+    height: 100px;
+  }
+  body nav.navbar .navbar-brand {
+    height: 80%;
+    left: 0;
+    padding-top: 5px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+  }
+  body nav.navbar .navbar-nav {
+    margin-top: 70px;
+  }
+}
+
+@media (min-width: 768px) {
+  body nav.navbar {
+    margin-bottom: 10px;
+  }
+  body nav.navbar .navbar-nav {
+    width: 100%;
+    text-align: center;
+    display: -webkit-inline-flex;
+    display: -moz-inline-flex;
+    display: -ms-inline-flex;
+    display: -o-inline-flex;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+  body nav.navbar .navbar-nav > li {
+    width: -webkit-calc(100% / 5);
+    width: calc(100% / 5);
+  }
+  body nav.navbar .navbar-nav > li a {
+    height: 100px;
+    line-height: 70px;
+  }
+  body nav.navbar .navbar-nav > li:nth-child(2) {
+    margin-right: -webkit-calc(100% / 5);
+    margin-right: calc(100% / 5);
+  }
+  body nav.navbar .navbar-header {
+    width: 100%;
+    position: absolute;
+  }
+  body nav.navbar .navbar-brand {
+    width: -webkit-calc(100% - 60px);
+    width: calc(100% - 60px);
+    text-align: center;
+    padding-left: 100px;
+    height: 100%;
+    max-height: 100px;
+  }
+  body nav.navbar .udacity-logo {
+    max-height: 80px;
+  }
+}
+
 body > section > .container,
 body section.container,
 body footer {
   padding-top: 20px;
   padding-bottom: 50px;
-}
-
-body header {
-  padding-bottom: 20px;
-}
-
-body header .udacity-logo {
-  border: 5px solid #ff9528;
-  border-radius: 50%;
-  max-width: 100px;
-  padding: 10px;
 }
 
 body header #menu {
@@ -66,7 +137,14 @@ body header #menu {
   padding: 0;
 }
 
-body header #menu li {
+body header #menu.vertical-center {
+  min-height: 100%;
+  /* Fallback for browsers do NOT support vh unit */
+  min-height: 5vh;
+  /* These two lines are counted as one :-)       */
+}
+
+body header #menu * {
   text-indent: none;
   list-style-type: none;
   text-align: center;
@@ -360,6 +438,9 @@ textarea {
   margin-bottom: 20px;
 }
 
-.paper-input-container-0 .input-content.paper-input-container input, .paper-input-container-0 .input-content.paper-input-container textarea, .paper-input-container-0 .input-content.paper-input-container iron-autogrow-textarea, .paper-input-container-0 .input-content.paper-input-container .paper-input-input {
+.paper-input-container-0 .input-content.paper-input-container input,
+.paper-input-container-0 .input-content.paper-input-container textarea,
+.paper-input-container-0 .input-content.paper-input-container iron-autogrow-textarea,
+.paper-input-container-0 .input-content.paper-input-container .paper-input-input {
   color: #fff;
 }
