@@ -1,8 +1,17 @@
 #about_me {
-    background-image: url(../img/zirkel-830083_1920.png);
+    background-image: url(../img/boat-802121_1920.jpg);
     background-size: cover;
     border-bottom: 1px solid #D5B791;
     color: $gris;
+    img {
+        border: 10px solid #fff;
+        border-radius: 3px;
+        -moz-box-shadow: 0 0 5px 0 $gris;
+        -webkit-box-shadow: 0 0 5px 0 $gris;
+        -o-box-shadow: 0 0 5px 0 $gris;
+        box-shadow: 0 0 5px 0 $gris;
+        filter:progid:DXImageTransform.Microsoft.Shadow(color=$gris, Direction=NaN, Strength=5);
+    }
     @media (max-width: 767px) {
         text-align: center;
         img {
