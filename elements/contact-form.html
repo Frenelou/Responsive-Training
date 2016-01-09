@@ -9,12 +9,19 @@
 
         <form is="iron-form" id="form" method="post" action="/">
 
-            <paper-input label="Name" auto-validate allowed-pattern="[a-zA-Z]"></paper-input>
-<gold-email-input label="Auto-validating" required auto-validate></gold-email-input>
-            <paper-input label="Object" auto-validate pattern="[a-zA-Z]*" error-message="letters only!"></paper-input>
-<label id="textareaLabel" for="message">Message</label>
-            <textarea name="message" rows="8" cols="40"></textarea>
-
+            <fieldset class="form-group">
+              <paper-input label="Name" auto-validate allowed-pattern="[a-zA-Z]"></paper-input>
+            </fieldset>
+            <fieldset class="form-group">
+              <gold-email-input label="Email" required auto-validate></gold-email-input>
+            </fieldset>
+            <fieldset class="form-group">
+              <paper-input label="Object" auto-validate pattern="[a-zA-Z]*" error-message="letters only!"></paper-input>
+            </fieldset>
+            <fieldset class="form-group">
+              <label id="textareaLabel" for="message">Message</label>
+              <textarea name="message" rows="8" cols="40"></textarea>
+            </fieldset>
             <button class="btn btn-success" onclick="update()">Validate!</button>
 
         </form>

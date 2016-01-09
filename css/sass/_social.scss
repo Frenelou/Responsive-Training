@@ -1,0 +1,17 @@
+#social-icons {
+    display: inline-flex;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 0;
+    a {
+        background-color: $gris;
+        color: #fff;
+        font-size: 30px;
+        font-weight: bold;
+        width: calc((100% - 80px )/ 4);
+        border-radius: 50%;
+        text-align: center;
+        padding-top: 50%;
+        margin: 0 10px;
+    }
+}

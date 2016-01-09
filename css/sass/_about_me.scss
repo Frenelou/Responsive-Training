@@ -1,0 +1,13 @@
+#about_me {
+    background-image: url(../img/zirkel-830083_1920.png);
+    background-size: cover;
+    border-bottom: 1px solid #D5B791;
+    color: $gris;
+    @media (max-width: 767px) {
+        text-align: center;
+        img {
+            max-width: 70%;
+            margin-top: 30px;
+        }
+    }
+}

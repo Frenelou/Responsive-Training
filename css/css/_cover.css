@@ -1,0 +1,21 @@
+#cover {
+  background-image: url(../img/italy.jpg);
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+@media (min-width: 767px) {
+  #cover {
+    min-height: 88vh;
+  }
+  #cover .vertical-center {
+    min-height: 100%;
+    /* Fallback for browsers do NOT support vh unit */
+    min-height: 88vh;
+    /* These two lines are counted as one :-)       */
+    display: flex;
+    align-items: center;
+  }
+}

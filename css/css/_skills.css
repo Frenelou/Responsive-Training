@@ -1,0 +1,82 @@
+#skills {
+  background-image: url(../img/wood.jpg);
+  background-size: cover;
+  color: #fff;
+  border-top: 1px solid #252525;
+  background-color: #0C0F14;
+}
+
+#skills #grid {
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 360px) {
+  #skills #grid {
+    padding-left: 20%;
+  }
+}
+
+@media (min-width: 361px) {
+  #skills #grid {
+    padding-left: calc(20% - 20px);
+  }
+}
+
+#skills #grid .hexagon {
+  transform: rotate(-60deg) skewY(30deg) translateZ(-1px);
+  width: 200px;
+  overflow: hidden;
+  float: left;
+  margin-right: 10px;
+}
+
+@media (min-width: 768px) {
+  #skills #grid .hexagon {
+    width: calc((80% - 20px) / 3);
+  }
+  #skills #grid .hexagon:nth-child(4n) {
+    margin-left: calc(((80% - 20px) / 3) / 2);
+    clear: both;
+  }
+  #skills #grid .hexagon:last-child {
+    margin-left: calc(((80% - 20px) / 3));
+    clear: both;
+  }
+}
+
+@media (min-width: 361px) and (max-width: 767px) {
+  #skills #grid .hexagon {
+    width: calc((80% - 20px) / 3);
+  }
+  #skills #grid .hexagon:nth-child(4n) {
+    margin-left: calc(((80% - 20px) / 3) / 2);
+    clear: both;
+  }
+}
+
+@media (max-width: 360px) {
+  #skills #grid .hexagon {
+    width: calc((100% - 20px) / 2);
+  }
+  #skills #grid .hexagon:nth-child(3n) {
+    margin-left: calc(100% / 4);
+  }
+}
+
+#skills #grid .hexagon .hexLayer2 {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transform: skewY(-30deg) rotate(60deg);
+  position: relative;
+}
+
+#skills #grid .hexagon img {
+  height: 100%;
+  left: -100%;
+  margin: 0 auto;
+  right: -100%;
+  width: 100%;
+  max-width: 120%;
+}
