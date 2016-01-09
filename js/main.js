@@ -4,7 +4,7 @@ $(function() {
 $(window).resize(function() {
     setItemsHeight('.hexagon', '#social-icons a');
 });
-
+$(".navbar-nav a[href^=#]").click(function(e) { e.preventDefault(); var dest = $(this).attr('href'); console.log(dest); $('html,body').animate({ scrollTop: $(dest).offset().top - 100 }, 'slow'); });
 function setItemsHeight(target) {
     for (var i = 0, j = arguments.length; i < j; i++) {
 

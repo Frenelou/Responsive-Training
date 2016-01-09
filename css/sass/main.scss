@@ -30,6 +30,8 @@ body {
         max-width: 800px;
     }
 nav.navbar{
+border-bottom: 1px solid  lighten($gris, 70%);
+  background-color: #fff;
   .navbar-header{
     width: 100%;
   }
@@ -74,11 +76,11 @@ width: 100%;
             display: -o-inline-flex;
             display: inline-flex;
             > li {
-              width: calc(100% / 5);
+              width: calc(100% / 7);
               a{height: 100px;
                 line-height: 70px;}
-                &:nth-child(2){
-                  margin-right: calc(100% / 5)
+                &:nth-child(3){
+                  margin-right: calc(100% / 7)
                 }
 
               }
@@ -134,6 +136,7 @@ width: 100%;
         padding-bottom: 50px;
     }
     header {
+      margin-bottom: 70px;
         // color: #fff;
 
             #menu {
@@ -350,7 +353,8 @@ width: 100%;
                         left: -100%;
                         margin: 0 auto;
                         right: -100%;
-                        width: auto;
+                        width: 100%;
+                        max-width: 120%;
                     }
                 }
             }
@@ -359,6 +363,7 @@ width: 100%;
             display: inline-flex;
             padding-left: 10%;
             padding-right: 10%;
+            padding-bottom: 0;
             a {
                 background-color: $gris;
                 color: #fff;
