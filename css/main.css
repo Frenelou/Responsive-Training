@@ -3,6 +3,29 @@
   padding-left: 0;
 }
 
+@media (min-width: 767px) {
+  .row-eq-height {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .vertical-center {
+    min-height: 100%;
+    /* Fallback for browsers do NOT support vh unit */
+    min-height: 60vh;
+    /* These two lines are counted as one :-)       */
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 img {
   max-width: 100%;
 }
@@ -13,26 +36,65 @@ body > * > .container {
 }
 
 body header,
-body > section {
-  padding-top: 30px;
-  padding-bottom: 30px;
+body > section > .container,
+body section.container,
+body footer {
+  padding-top: 20px;
+  padding-bottom: 50px;
 }
 
-body .udacity-logo {
-  border: 10px solid #ff9528;
+body header {
+  padding-bottom: 20px;
+}
+
+body header .udacity-logo {
+  border: 5px solid #ff9528;
   border-radius: 50%;
-  max-width: 130px;
+  max-width: 100px;
+  padding: 10px;
 }
 
-body #mushroom {
-  border-bottom: 10px solid  #687C97;
+body header #menu {
+  display: -webkit-inline-flex;
+  display: -moz-inline-flex;
+  display: -ms-inline-flex;
+  display: -o-inline-flex;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+  padding: 0;
 }
 
-body #mushroom .col-xs-12 {
+body header #menu li {
+  text-indent: none;
+  list-style-type: none;
+  text-align: center;
+  width: 25%;
+}
+
+body #cover {
+  height: 500px;
+  background-image: url(../img/italy.jpg);
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+body #intro {
+  background-image: url(../img/wood.jpg);
+  background-size: cover;
+  color: #fff;
+  -o-box-shadow: inset 0 10px 20px 0 #252525;
+  box-shadow: inset 0 10px 20px 0 #252525;
+  filter: progid:DXImageTransform.Microsoft.Shadow(color=#252525, Direction=180, Strength=10);
+}
+
+body #intro .col-xs-12 {
   overflow: hidden;
 }
 
-body #mushroom .col-xs-12 .container {
+body #intro .col-xs-12 .container {
   border-radius: 5px;
   background-image: url(../img/notebook-336634_1920.jpg);
   background-repeat: no-repeat;
@@ -40,74 +102,139 @@ body #mushroom .col-xs-12 .container {
   height: 800px;
 }
 
-@media (min-width: 360px) {
-  body #mushroom .col-xs-12 .container .row-eq-height {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
-
 @media (max-width: 360px) {
-  body #mushroom .col-xs-12 .container section[class^='col-xs'] {
+  body #intro .col-xs-12 .container section[class^='col-xs'] {
     width: 100%;
   }
 }
 
-body #mushroom .col-xs-12 .container > div:not(:first-child) {
+body #intro .col-xs-12 .container > div:not(:first-child) {
   box-shadow: inset 0 10px 0 0 #fff;
 }
 
-body #mushroom .col-xs-12 .container > .row {
+body #intro .col-xs-12 .container > .row {
   height: -webkit-calc(100% / 3);
   height: calc(100% / 3);
 }
 
-body #mushroom .col-xs-12 .container > .row section {
+body #intro .col-xs-12 .container > .row section {
   text-align: center;
 }
 
-body #mushroom .col-xs-12 .container > .row section div {
+body #intro .col-xs-12 .container > .row section div {
   padding-top: 20px;
 }
 
-body #mushroom .col-xs-12 .container > .row section.double div {
+body #intro .col-xs-12 .container > .row section.double div {
   height: -webkit-calc((100% - (10px * 2)) / 2);
   height: calc((100% - (10px * 2)) / 2);
 }
 
-body #mushroom .col-xs-12 .container > .row section.double div:last-child {
+body #intro .col-xs-12 .container > .row section.double div:last-child {
   box-shadow: inset 0 10px 0 0 #fff;
 }
 
-body #mushroom .col-xs-12 .container > .row section.single div {
+body #intro .col-xs-12 .container > .row section.single div {
   height: 100%;
 }
 
-body #mushroom .col-xs-12 .container > .row > section:last-child {
+body #intro .col-xs-12 .container > .row > section:last-child {
   box-shadow: inset 10px 0 0 0 #fff;
 }
 
-body #hullahoop div {
-  text-align: center;
-  border-top: 5px solid red;
-  height: 200px;
+body #whoAmI {
+  background-color: #30323B;
+  color: #fff;
+  border-bottom: 1px solid #42444d;
 }
 
-body #hullahoop div:not(:last-child) {
-  border-right: 1px solid #e5e5e5;
+@media (max-width: 767px) {
+  body #whoAmI * {
+    text-align: center;
+  }
+  body #whoAmI img {
+    max-width: 70%;
+    margin-top: 30px;
+  }
+}
+
+@media (min-width: 768px) {
+  body #hullahoop .col-xs-12 {
+    display: -webkit-inline-flex;
+    display: -moz-inline-flex;
+    display: -ms-inline-flex;
+    display: -o-inline-flex;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+  body #hullahoop .col-xs-12 .cards {
+    width: -webkit-calc((100% - 30px) / 4);
+    width: calc((100% - 30px) / 4);
+  }
+  body #hullahoop .col-xs-12 .cards:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  body #hullahoop .cards {
+    width: 70%;
+    margin: auto 15%;
+  }
+}
+
+body #hullahoop .cards {
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid #e5e5e5;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 10px;
+  -o-box-shadow: 0 0 5px 0 #e5e5e5;
+  box-shadow: 0 0 5px 0 #e5e5e5;
+  filter: progid:DXImageTransform.Microsoft.Shadow color=#e5e5e5, Direction=NaN, Strength=5;
+}
+
+body #hullahoop .cards > *:not(.illustration) {
+  padding: 0 5px;
+}
+
+body #hullahoop .cards .illustration {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+45,DC290B+46,DC290B+55,ffffff+55,ffffff+100 */
+  background: #ffffff;
+  /* Old browsers */
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #ffffff 0%, #ffffff 40%, #DC290B 41%, #DC290B 55%, #ffffff 55%, #ffffff 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #ffffff 0%, #ffffff 40%, #DC290B 41%, #DC290B 55%, #ffffff 55%, #ffffff 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 );
+  /* IE6-9 */
+  text-align: center;
+  width: 100%;
+}
+
+body #hullahoop .cards .illustration i {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: #DC290B;
+  color: #fff;
+  line-height: 30px;
 }
 
 body #honeycomb {
-  border-top: 1px solid  #000;
-  height: 800px;
+  background-image: url(../img/wood.jpg);
+  background-size: cover;
+  color: #fff;
+  border-top: 1px solid #252525;
   background-color: #0C0F14;
 }
 
 body #honeycomb #grid {
-  height: 500px;
-  padding-top: 200px;
+  margin-top: 30px;
+  margin-bottom: 40px;
 }
 
 @media (max-width: 360px) {
@@ -196,6 +323,7 @@ body #social-icons {
   display: -ms-inline-flexbox;
   display: inline-flex;
   padding-left: 10%;
+  padding-right: 10%;
 }
 
 body #social-icons a {
@@ -203,19 +331,35 @@ body #social-icons a {
   color: #fff;
   font-size: 30px;
   font-weight: bold;
-  width: -webkit-calc((80% - 20px )/ 4);
-  width: calc((80% - 20px )/ 4);
+  width: -webkit-calc((100% - 80px )/ 4);
+  width: calc((100% - 80px )/ 4);
   border-radius: 50%;
   text-align: center;
   padding-top: 50%;
-}
-
-body #social-icons a:not(:last-child) {
-  margin-right: 20px;
-  color: #fff;
+  margin: 0 10px;
 }
 
 body footer {
   background-color: #323232;
+  color: #737373;
+}
+
+#textareaLabel {
+  padding-top: 20px;
+  font-family: "Roboto","Noto",sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+textarea {
+  width: 100%;
+  background-color: #737373;
+  border-radius: 3px;
+  border: none;
+  margin-bottom: 20px;
+}
+
+.paper-input-container-0 .input-content.paper-input-container input, .paper-input-container-0 .input-content.paper-input-container textarea, .paper-input-container-0 .input-content.paper-input-container iron-autogrow-textarea, .paper-input-container-0 .input-content.paper-input-container .paper-input-input {
   color: #fff;
 }

@@ -1,8 +1,25 @@
 $gris: #323232;
+$texte_gris: #737373;
 $gridGutter: 10px;
 .no-gutter > [class*='col-'] {
     padding-right: 0;
     padding-left: 0;
+}
+@media (min-width: 767px) {
+    .row-eq-height {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+    }
+    .vertical-center {
+        min-height: 100%;
+        /* Fallback for browsers do NOT support vh unit */
+        min-height: 60vh;
+        /* These two lines are counted as one :-)       */
+        display: flex;
+        align-items: center;
+    }
 }
 img {
     max-width: 100%;
@@ -14,20 +31,53 @@ body {
     }
     // max-width: 800px;
     header,
-    >section {
-        padding-top: 30px;
-        padding-bottom: 30px;
+    >section>.container,
+    section.container,
+    footer {
+        padding-top: 20px;
+        padding-bottom: 50px;
     }
-    .udacity-logo {
-        border: 10px solid #ff9528;
-        border-radius: 50%;
-        max-width: 130px;
+    header {
+        // color: #fff;
+        padding-bottom: 20px;
+        .udacity-logo {
+            border: 5px solid #ff9528;
+            border-radius: 50%;
+            max-width: 100px;
+            padding: 10px;
+        }
+        #menu {
+            display: -webkit-inline-flex;
+            display: -moz-inline-flex;
+            display: -ms-inline-flex;
+            display: -o-inline-flex;
+            display: inline-flex;
+            width: 100%;
+            padding: 0;
+            li {
+              text-indent: none;
+                list-style-type: none;
+                text-align: center;
+                width: 25%;
+            }
+        }
     }
-    #mushroom {
-      border-bottom: 10px solid  #687C97;
-        // background-image: url(../img/valley.png);
-        // background-repeat: no-repeat;
-        // background-size: cover;
+    #cover {
+        height: 500px;
+        background-image: url(../img/italy.jpg);
+        background-size: cover;
+        background-position: bottom;
+        background-repeat: no-repeat;
+    }
+    #intro {
+        background-image: url(../img/wood.jpg);
+        background-size: cover;
+        color: #fff;
+        -moz-box-shadow: inset 0 10px 20px 0 #252525;
+        -webkit-box-shadow: inset 0 10px 20px 0 #252525;
+        -o-box-shadow: inset 0 10px 20px 0 #252525;
+        box-shadow: inset 0 10px 20px 0 #252525;
+        filter:progid:DXImageTransform.Microsoft.Shadow(color=#252525, Direction=180, Strength=10);
         .col-xs-12 {
             overflow: hidden;
             .container {
@@ -36,14 +86,7 @@ body {
                 background-repeat: no-repeat;
                 background-size: cover;
                 height: 800px;
-                @media (min-width:360px) {
-                    .row-eq-height {
-                        display: -webkit-box;
-                        display: -webkit-flex;
-                        display: -ms-flexbox;
-                        display: flex;
-                    }
-                }
+                @media (min-width:360px) {}
                 @media (max-width:360px) {
                     section[class^='col-xs'] {
                         width: 100%;
@@ -61,7 +104,9 @@ body {
                         }
                         &.double div {
                             height: calc((100% - (10px * 2)) / 2);
-                            &:last-child{box-shadow: inset 0 $gridGutter 0 0 #fff;}
+                            &:last-child {
+                                box-shadow: inset 0 $gridGutter 0 0 #fff;
+                            }
                         }
                         &.single div {
                             height: 100%;
@@ -74,26 +119,89 @@ body {
                 }
             }
         }
-
     }
-    #hullahoop {
-        div {
-            text-align: center;
-            border-top: 5px solid red;
-            height: 200px;
-            &:not(:last-child) {
-                border-right: 1px solid lighten($gris, 70%);
+    #whoAmI {
+        background-color: #30323B;
+        color: #fff;
+        border-bottom: 1px solid #42444d;
+        @media (max-width: 767px) {
+            * {
+                text-align: center;
+            }
+            img {
+                max-width: 70%;
+                margin-top: 30px;
             }
         }
     }
-    #holiday {}
+    #hullahoop {
+        @media (min-width: 768px) {
+            .col-xs-12 {
+                display: -webkit-inline-flex;
+                display: -moz-inline-flex;
+                display: -ms-inline-flex;
+                display: -o-inline-flex;
+                display: inline-flex;
+                .cards {
+                    width: calc((100% - 30px) / 4);
+                    &:not(:last-child) {
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+        @media (max-width: 768px) {
+            .cards {
+                width: 70%;
+                margin: auto 15%;
+            }
+        }
+        .cards {
+          >*:not(.illustration){
+            padding: 0 5px ;
+          }
+            .illustration {
+              /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+45,DC290B+46,DC290B+55,ffffff+55,ffffff+100 */
+background: #ffffff; /* Old browsers */
+background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 40%, #DC290B 41%, #DC290B 55%, #ffffff 55%, #ffffff 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #ffffff 0%,#ffffff 40%,#DC290B 41%,#DC290B 55%,#ffffff 55%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #ffffff 0%,#ffffff 40%,#DC290B 41%,#DC290B 55%,#ffffff 55%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+                text-align: center;
+                width: 100%;
+                i {
+                    height: 30px;
+                    width: 30px;
+                    border-radius: 50%;
+                    background-color: #DC290B;
+                    color: #fff;
+                    line-height: 30px;
+                }
+
+            }
+            text-align: center;
+            border-radius: 5px;
+            border: 1px solid lighten($gris, 70%);
+            padding-top: 20px;
+            padding-bottom: 20px;
+            // padding: 10px;
+            margin-top: 10px;
+            -moz-box-shadow: 0 0 5px 0 lighten($gris, 70%);
+            -webkit-box-shadow: 0 0 5px 0 lighten($gris, 70%);
+            -o-box-shadow: 0 0 5px 0 lighten($gris, 70%);
+            box-shadow: 0 0 5px 0 lighten($gris, 70%);
+            filter:progid:DXImageTransform.Microsoft.Shadow(color=lighten($gris, 70%), Direction=NaN, Strength=5);
+        }
+    }
     #honeycomb {
-      border-top: 1px solid  #000;
-      height: 800px;
-      background-color: #0C0F14;
-            #grid {
-            height: 500px;
-            padding-top: 200px;
+        background-image: url(../img/wood.jpg);
+        background-size: cover;
+        color: #fff;
+        border-top: 1px solid #252525;
+        background-color: #0C0F14;
+        #grid {
+            margin-top: 30px;
+            margin-bottom: 40px;
             @media (max-width: 360px) {
                 padding-left: 20%;
             }
@@ -150,25 +258,38 @@ body {
     #social-icons {
         display: inline-flex;
         padding-left: 10%;
+        padding-right: 10%;
         a {
             background-color: $gris;
             color: #fff;
             font-size: 30px;
             font-weight: bold;
-            width: calc((80% - 20px )/ 4);
+            width: calc((100% - 80px )/ 4);
             border-radius: 50%;
             text-align: center;
             padding-top: 50%;
-            &:not(:last-child) {
-                margin-right: 20px;
-
-              color: #fff;
+            margin: 0 10px;
         }
-      }
     }
     footer {
         background-color: $gris;
-        color: #fff;
+        color: $texte_gris;
     }
 }
 //body
+#textareaLabel{
+  padding-top: 20px;
+font-family: "Roboto","Noto",sans-serif;
+font-size: 16px;
+font-weight: 400;
+line-height: 24px;}
+textarea{
+  width: 100%;
+  background-color: $texte_gris;
+  border-radius: 3px;
+  border: none;
+  margin-bottom: 20px;
+}
+.paper-input-container-0 .input-content.paper-input-container input, .paper-input-container-0 .input-content.paper-input-container textarea, .paper-input-container-0 .input-content.paper-input-container iron-autogrow-textarea, .paper-input-container-0 .input-content.paper-input-container .paper-input-input{
+  color: #fff;
+}

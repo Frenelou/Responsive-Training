@@ -16,21 +16,26 @@
 
 
 <body>
-    <div class="container">
+    <div class="container-fluid">
         <header class="row">
             <div class="col-sx-12 text-center">
-                <a href="https://www.udacity.com">
-                    <img class="udacity-logo img-rounded" src="img/udacity_logo.png">
-                </a>
+                <h1>
+                    <a href="https://www.udacity.com">
+                        <img class="udacity-logo img-rounded" src="img/udacity_logo.png">
+                    </a>
+                </h1>
+                <ul id="menu">
+                    <li>Lorem ipsum</li>
+                    <li>dolor sit amet</li>
+                    <li>Duis aute irure</li>
+                    <li>reprehenderit in voluptate</li>
+                </ul>
             </div>
         </header>
     </div>
-    <section id="main">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12" class="main_img">
-                    <img alt="Jam" src="img/Jam.png" class="main-img img-fluid center-block img-rounded">
-                </div>
+    <section id="cover" class="container-fluid">
+        <div class="row no-gutter">
+            <div class="col-xs-12" class="main_img">
             </div>
         </div>
     </section>
@@ -43,11 +48,9 @@
                 </div>
             </div>
         </div>
-    </section>
-    <section id="mushroom">
         <div class="container">
-            <div class="col-xs-12">
-                <div class="row">
+            <div class="row">
+                <div class="col-xs-12">
                     <div class="container">
                         <div class="row row-eq-height no-gutter">
                             <section class="col-xs-4 double">
@@ -80,7 +83,29 @@
             </div>
         </div>
     </section>
+    <section id="whoAmI">
+        <div class="container">
+            <div class="row row-eq-height vertical-center">
+                <div class="col-xs-12 col-sm-6 ">
+                    <h2>He who knows</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id consequuntur quo repudiandae quidem eos, maiores voluptatem tempora alias sit ex optio rerum laborum hic excepturi provident maxime sapiente repellendus quam.</p>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <img class="img-circle img-fluid center-block" src="img/holiday.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
     <section id="honeycomb">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2>He who knows</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id consequuntur quo repudiandae quidem eos, maiores voluptatem tempora alias sit ex optio rerum laborum hic excepturi provident maxime sapiente repellendus quam.</p>
+
+                </div>
+            </div>
+        </div>
         <div class="container">
             <div class="row">
                 <div id="grid" class="col-xs-12 text-center">
@@ -119,40 +144,35 @@
         </div>
     </section>
 
-    <section id="hullahoop">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-3">
+    <section id="hullahoop" class="container">
+        <div class="row">
+            <div class="col-xs-12 text-center">
+                <div class="cards">
+                  <p class="illustration"><i class="fa fa-rocket"></i></p>
                     <h3>mix #1</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci qui error nobis, maxime quidem voluptatum.</p>
                 </div>
-                <div class="col-xs-12 col-sm-3">
+                <div class="cards">
+                  <p class="illustration"><i class="fa fa-compass"></i></p>
                     <h3>mix #2</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium ab iusto nihil et asperiores perferendis.</p>
                 </div>
-                <div class="col-xs-12 col-sm-3">
+                <div class="cards">
+                  <p class="illustration"><i class="fa fa-ship"></i></p>
                     <h3>mix #3</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio ipsa minus suscipit tempore! Molestiae nobis. ipsam molestias!</p>
                 </div>
-                <div class="col-xs-12 col-sm-3">
+                <div class="cards">
+                  <p class="illustration"><i class="fa fa-support"></i></p>
                     <h3>mix #4</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est veritatis libero consectetur porro soluta error eos. quae.</p>
                 </div>
             </div>
         </div>
     </section>
-    <section id="holiday">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-6 col-xs-offset-3">
-                    <img class="img-circle img-fluid center-block" src="img/holiday.png" alt="">
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="social">
-        <div class="container">
-            <div class="row">
+
+    <section id="social" class="container">
+            <div class="row no-gutter">
                 <div id="social-icons" class="col-xs-12 col-sm-8 col-sm-offset-2">
                     <a href="#"><i class="fa fa-facebook"></i></a>
                     <a href="#"><i class="fa fa-twitter"></i></a>
@@ -160,14 +180,19 @@
                     <a href="#"><i class="fa fa-github"></i></a>
                 </div>
             </div>
-        </div>
     </section>
 
     <footer class="gris">
         <div class="container">
-            <div class="col-xs-12 text-center">
-                <h2>Call me maybe</h2>
-                <contact-form></contact-form>
+            <div class="row row-eq-height">
+              <div class="col-xs-12 col-sm-6 text-justify">
+                  <h2>Call me maybe</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit corporis voluptatem adipisci natus, nam voluptatibus iusto doloribus ullam architecto, dolore maxime ipsam veniam facere in aliquam expedita rem consequatur repellendus?</p>
+                  <p>Culpa iste incidunt corporis. Voluptate at asperiores doloribus, molestias nesciunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere qui velit suscipit quo, placeat inventore, non asperiores nihil dicta amet.</p>
+              </div>
+              <div class="col-xs-12 col-sm-6 ">
+                  <contact-form></contact-form>
+              </div>
             </div>
         </div>
     </footer>
