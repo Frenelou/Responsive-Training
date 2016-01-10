@@ -93,14 +93,24 @@ nav.navbar * {
 }
 
 header {
+  color: #fff;
   background-image: url(../img/italy.jpg);
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
-  color: #fff;
 }
 
-@media (min-width: 767px) {
+@media (max-width: 767px) {
+  header {
+    background-position: 70% 90%;
+    background-size: auto auto;
+    box-sizing: border-box;
+    min-height: 40vh;
+    padding-top: 25%;
+  }
+}
+
+@media (min-width: 768px) {
   header {
     min-height: 88vh;
   }
@@ -129,56 +139,94 @@ header {
   filter: progid:DXImageTransform.Microsoft.Shadow(color=#252525, Direction=180, Strength=10);
 }
 
-#intro .col-xs-12 {
-  overflow: hidden;
-}
-
-#intro .col-xs-12 .container {
-  border-radius: 5px;
-  background-image: url(../img/notebook-336634_1920.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 800px;
-}
-
-@media (max-width: 360px) {
-  #intro .col-xs-12 .container section[class^='col-xs'] {
-    width: 100%;
-  }
-}
-
-#intro .col-xs-12 .container > div:not(:first-child) {
-  box-shadow: inset 0 10px 0 0 #fff;
-}
-
-#intro .col-xs-12 .container > .row {
-  height: -webkit-calc(100% / 3);
-  height: calc(100% / 3);
-}
-
-#intro .col-xs-12 .container > .row section {
-  text-align: center;
-}
-
-#intro .col-xs-12 .container > .row section div {
-  padding-top: 20px;
-}
-
-#intro .col-xs-12 .container > .row section.double div {
-  height: -webkit-calc((100% - (10px * 2)) / 2);
-  height: calc((100% - (10px * 2)) / 2);
-}
-
-#intro .col-xs-12 .container > .row section.double div:last-child {
-  box-shadow: inset 0 10px 0 0 #fff;
-}
-
-#intro .col-xs-12 .container > .row section.single div {
+#intro img {
   height: 100%;
 }
 
-#intro .col-xs-12 .container > .row > section:last-child {
-  box-shadow: inset 10px 0 0 0 #fff;
+#intro #wright {
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 20px;
+  background-color: #51748F;
+}
+
+#intro #wright * {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#intro #wright p {
+  padding: 20%;
+}
+
+@media (max-width: 767px) {
+  #intro #wright {
+    margin: 0 auto;
+    width: 80%;
+  }
+  #intro #wright .shoes, #intro #wright .milestone {
+    background-size: contain;
+    background-position: center bottom;
+  }
+}
+
+@media (min-width: 768px) {
+  #intro #wright {
+    background-image: url(../img/mount-mckinley.png);
+    background-size: cover;
+    height: 1000px;
+  }
+  #intro #wright #grid {
+    height: 100%;
+    overflow: hidden;
+  }
+  #intro #wright #grid section.row:not(:last-child) {
+    height: -webkit-calc((100% / 5) * 2);
+    height: calc((100% / 5) * 2);
+  }
+  #intro #wright #grid section.row:last-child {
+    height: -webkit-calc( 100% / 5);
+    height: calc( 100% / 5);
+  }
+  #intro #wright #grid section.row:nth-child(2) {
+    border: 10px solid #fff;
+    border-width: 10px 0 10px 0;
+  }
+  #intro #wright #grid section.row > div:first-child {
+    border-right: 10px solid #fff;
+  }
+  #intro #wright #grid section.row > div div {
+    background-size: cover;
+  }
+  #intro #wright #grid section.row > div.double div {
+    height: 50%;
+  }
+  #intro #wright #grid section.row > div.double div:first-child {
+    border-bottom: 10px solid #fff;
+  }
+  #intro #wright #grid section.row > div:not(.double) > div {
+    height: 100%;
+  }
+}
+
+#intro #wright .shoes {
+  background-image: url(../img/shoes.png);
+}
+
+#intro #wright .directions {
+  background-image: url(../img/directions.png);
+}
+
+#intro #wright .map {
+  background-image: url(../img/map.png);
+}
+
+#intro #wright .milestone {
+  background-image: url(../img/milestone.png);
+}
+
+#intro #wright .hat {
+  background-image: url(../img/hat.png);
 }
 
 #skills {
@@ -197,7 +245,7 @@ header {
 
 @media (max-width: 360px) {
   #skills #honeycomb {
-    padding-left: 20%;
+    padding-left: 8%;
   }
 }
 
@@ -296,7 +344,7 @@ header {
     text-align: center;
   }
   #about_me img {
-    max-width: 70%;
+    max-width: 80%;
     margin-top: 30px;
   }
 }
@@ -320,7 +368,7 @@ header {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   #cards .cards {
     width: 70%;
     margin: auto 15%;
@@ -344,16 +392,10 @@ header {
 }
 
 #cards .cards .illustration {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+45,DC290B+46,DC290B+55,ffffff+55,ffffff+100 */
   background: #ffffff;
-  /* Old browsers */
-  /* FF3.6-15 */
   background: -webkit-linear-gradient(top, #ffffff 0%, #ffffff 40%, #DC290B 41%, #DC290B 55%, #ffffff 55%, #ffffff 100%);
-  /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to bottom, #ffffff 0%, #ffffff 40%, #DC290B 41%, #DC290B 55%, #ffffff 55%, #ffffff 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 );
-  /* IE6-9 */
   text-align: center;
   width: 100%;
 }

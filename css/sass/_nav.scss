@@ -14,17 +14,17 @@ nav.navbar {
             padding: 0;
         }
     }
-    li.active a{
-      color: #fff;
-      background-color: $udacity;
-    -webkit-transition: background-color 1000ms linear;
-    -moz-transition: background-color 1000ms linear;
-    -o-transition: background-color 1000ms linear;
-    -ms-transition: background-color 1000ms linear;
-    transition: background-color 1000ms linear;;
+    li.active a {
+        color: #fff;
+        background-color: $udacity;
+        -webkit-transition: background-color 1000ms linear;
+        -moz-transition: background-color 1000ms linear;
+        -o-transition: background-color 1000ms linear;
+        -ms-transition: background-color 1000ms linear;
+        transition: background-color 1000ms linear;
     }
     * {
-      background-color: #fff;
+        background-color: #fff;
     }
     @media (max-width: 767px) {
         height: 80px;

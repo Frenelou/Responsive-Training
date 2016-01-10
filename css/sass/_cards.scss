@@ -14,7 +14,7 @@
             }
         }
     }
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
         .cards {
             width: 70%;
             margin: auto 15%;
@@ -25,17 +25,11 @@
             padding: 0 5px;
         }
         .illustration {
-            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+45,DC290B+46,DC290B+55,ffffff+55,ffffff+100 */
             background: #ffffff;
-            /* Old browsers */
             background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 40%, #DC290B 41%, #DC290B 55%, #ffffff 55%, #ffffff 100%);
-            /* FF3.6-15 */
             background: -webkit-linear-gradient(top, #ffffff 0%,#ffffff 40%,#DC290B 41%,#DC290B 55%,#ffffff 55%,#ffffff 100%);
-            /* Chrome10-25,Safari5.1-6 */
             background: linear-gradient(to bottom, #ffffff 0%,#ffffff 40%,#DC290B 41%,#DC290B 55%,#ffffff 55%,#ffffff 100%);
-            /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
             filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 );
-            /* IE6-9 */
             text-align: center;
             width: 100%;
             i {
@@ -52,7 +46,6 @@
         border: 1px solid lighten($gris, 70%);
         padding-top: 20px;
         padding-bottom: 20px;
-        // padding: 10px;
         margin-top: 10px;
         -moz-box-shadow: 0 0 5px 0 lighten($gris, 70%);
         -webkit-box-shadow: 0 0 5px 0 lighten($gris, 70%);

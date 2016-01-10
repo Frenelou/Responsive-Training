@@ -39,7 +39,15 @@ function setItemsHeight(target) {
             });
         } else if (arguments[i] === '#social-icons a') {
             $(arguments[i]).css('line-height', target_width + 'px');
+        } else if (arguments[i] === '.grid_item') {
+            $(arguments[i]).css('line-height', target_width + 'px');
         }
 
+    }
+    // Resize Lorem Colorous items if necessary
+    if ($(window).width() <= 767) {
+        $('.grid_item').css('height', $('.grid_item').width()) + 'px';
+    } else {
+        $('.grid_item').removeAttr('style');
     }
 }
