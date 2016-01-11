@@ -1,7 +1,6 @@
 #about_me {
-    background-image: url(../img/boat-802121_1920.jpg);
+    background-image: url(../img/boat_wide.png);
     background-size: cover;
-    border-bottom: 1px solid #D5B791;
     color: $gris;
     img {
         border: 10px solid #fff;
@@ -13,6 +12,7 @@
         filter:progid:DXImageTransform.Microsoft.Shadow(color=$gris, Direction=NaN, Strength=5);
     }
     @media (max-width: 767px) {
+        background-image: url(../img/boat_wide-mobile.png);
         text-align: center;
         img {
             max-width: 80%;

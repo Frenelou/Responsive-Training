@@ -1,15 +1,21 @@
 header {
     color: #fff;
-    background-image: url(../img/italy.jpg);
+    background-image: url(../img/italy.png);
     background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
+    @media (max-width:360px) { 
+        padding-top: 25%;
+    }
+    @media (min-width:361px) and (max-width:767px) {
+        padding-top: 15%;
+    }
     @media (max-width:767px) {
+      background-image: url(../img/italy-mobile.png);
         background-position: 70% 90%;
         background-size: auto auto;
         box-sizing: border-box;
-        min-height: 40vh;
-        padding-top: 25%;
+        min-height: 60vh;
     }
     @media (min-width:768px) {
         min-height: 88vh;

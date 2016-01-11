@@ -94,19 +94,31 @@ nav.navbar * {
 
 header {
   color: #fff;
-  background-image: url(../img/italy.jpg);
+  background-image: url(../img/italy.png);
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
 }
 
+@media (max-width: 360px) {
+  header {
+    padding-top: 25%;
+  }
+}
+
+@media (min-width: 361px) and (max-width: 767px) {
+  header {
+    padding-top: 15%;
+  }
+}
+
 @media (max-width: 767px) {
   header {
+    background-image: url(../img/italy-mobile.png);
     background-position: 70% 90%;
     background-size: auto auto;
     box-sizing: border-box;
-    min-height: 40vh;
-    padding-top: 25%;
+    min-height: 60vh;
   }
 }
 
@@ -131,16 +143,23 @@ header {
 }
 
 #intro {
-  background-image: url(../img/wood.jpg);
-  background-size: cover;
   color: #fff;
   -o-box-shadow: inset 0 10px 20px 0 #252525;
   box-shadow: inset 0 10px 20px 0 #252525;
   filter: progid:DXImageTransform.Microsoft.Shadow(color=#252525, Direction=180, Strength=10);
 }
 
-#intro img {
-  height: 100%;
+@media (max-width: 767px) {
+  #intro {
+    background-image: url(../img/wood-mobile.png);
+  }
+}
+
+@media (min-width: 768px) {
+  #intro {
+    background-image: url(../img/wood.png);
+    background-size: cover;
+  }
 }
 
 #intro #wright {
@@ -156,17 +175,13 @@ header {
 }
 
 #intro #wright p {
-  padding: 20%;
+  padding: 10%;
 }
 
 @media (max-width: 767px) {
   #intro #wright {
     margin: 0 auto;
     width: 80%;
-  }
-  #intro #wright .shoes, #intro #wright .milestone {
-    background-size: contain;
-    background-position: center bottom;
   }
 }
 
@@ -176,9 +191,26 @@ header {
     background-size: cover;
     height: 1000px;
   }
+  #intro #wright .clearfix::before,
+  #intro #wright .clearfix::after,
+  #intro #wright .container::before,
+  #intro #wright .container::after,
+  #intro #wright .container-fluid::before,
+  #intro #wright .container-fluid::after,
+  #intro #wright .row::before,
+  #intro #wright .row::after {
+    content: none;
+    display: block;
+  }
   #intro #wright #grid {
     height: 100%;
     overflow: hidden;
+  }
+  #intro #wright #grid section.row {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
   #intro #wright #grid section.row:not(:last-child) {
     height: -webkit-calc((100% / 5) * 2);
@@ -192,10 +224,13 @@ header {
     border: 10px solid #fff;
     border-width: 10px 0 10px 0;
   }
-  #intro #wright #grid section.row > div:first-child {
+  #intro #wright #grid section.row > div:first-child:not(.col-sm-offset-8) {
     border-right: 10px solid #fff;
   }
-  #intro #wright #grid section.row > div div {
+  #intro #wright #grid section.row > div.col-sm-offset-8 {
+    border-left: 10px solid #fff;
+  }
+  #intro #wright #grid section.row > div div:not(.milestone) {
     background-size: cover;
   }
   #intro #wright #grid section.row > div.double div {
@@ -206,6 +241,11 @@ header {
   }
   #intro #wright #grid section.row > div:not(.double) > div {
     height: 100%;
+  }
+  #intro #wright #grid section.row .grid_item.shoes,
+  #intro #wright #grid section.row .milestone {
+    background-size: contain;
+    background-position: center bottom;
   }
 }
 
@@ -231,11 +271,17 @@ header {
 
 #skills {
   text-align: center;
-  background-image: url(../img/wood.jpg);
+  background-image: url(../img/wood.png);
   background-size: cover;
   color: #fff;
   border-top: 1px solid #252525;
   background-color: #0C0F14;
+}
+
+@media (max-width: 767px) {
+  #skills {
+    background-image: url(../img/wood-mobile.png);
+  }
 }
 
 #skills #honeycomb {
@@ -306,6 +352,7 @@ header {
 }
 
 #skills #honeycomb .hexagon .hexLayer2 {
+  display: block;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -316,7 +363,6 @@ header {
 }
 
 #skills #honeycomb .hexagon img {
-  height: 100%;
   left: -100%;
   margin: 0 auto;
   right: -100%;
@@ -325,9 +371,8 @@ header {
 }
 
 #about_me {
-  background-image: url(../img/boat-802121_1920.jpg);
+  background-image: url(../img/boat_wide.png);
   background-size: cover;
-  border-bottom: 1px solid #D5B791;
   color: #323232;
 }
 
@@ -341,6 +386,7 @@ header {
 
 @media (max-width: 767px) {
   #about_me {
+    background-image: url(../img/boat_wide-mobile.png);
     text-align: center;
   }
   #about_me img {
@@ -428,7 +474,6 @@ header {
   width: calc((100% - 80px )/ 4);
   border-radius: 50%;
   text-align: center;
-  padding-top: 50%;
   margin: 0 10px;
 }
 
@@ -464,12 +509,6 @@ footer .form-group .paper-input-container-0 .input-content.paper-input-container
   color: #fff;
 }
 
-@media (min-width: 767px) {
-  footer {
-    height: 88vh;
-  }
-}
-
 body {
   padding-top: 70px;
 }
@@ -500,7 +539,14 @@ body img {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
-    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
   }
   body .vertical-center {
     min-height: 100%;

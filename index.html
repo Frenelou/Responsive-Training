@@ -9,11 +9,12 @@
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
     <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
     <link rel="import" href="elements/contact-form.html">
 </head>
-
 
 <body>
     <header id="header" class="container-fluid">
@@ -30,7 +31,7 @@
         <div class="container-fluid">
             <div class="navbar-header">
                 <a class="navbar-brand" href="https://www.udacity.com">
-                    <img class="udacity-logo img-rounded" src="img/udacity_logo.png">
+                    <img class="udacity-logo img-rounded" src="img/udacity_logo.png" alt="logo Udacity">
                 </a>
                 <button aria-expanded="false" data-target="#bs-example-navbar-collapse-8" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
                     <span class="sr-only">Toggle navigation</span>
@@ -60,29 +61,33 @@
                 </div>
             </div>
 
-            <div id="wright" class="row">
+            <div id="wright" class="row no-gutter">
                 <div id="grid" class="col-xs-12">
                     <section class="row row-eq-height no-gutter">
                         <div class="double col-xs-12 col-sm-4">
-                            <div class="grid_item hat"></div>
+                            <div class="grid_item hat">
+                                <p>Fugit possimus officia ipsum quaerat reiciendis placeat illum aperiam dolores!</p>
+                            </div>
                         </div>
                         <div class="col-xs-12 col-sm-8">
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae esse, error ad incidunt impedit corporis doloremque deserunt dignissimos, voluptates blanditiis. Fugit possimus officia ipsum quaerat reiciendis placeat illum aperiam dolores!</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae esse, error ad incidunt impedit corporis doloremque deserunt dignissimos, voluptates blanditiis. Fugit possimus officia ipsum quaerat reiciendis placeat illum
+                                aperiam dolores!</p>
                         </div>
                     </section>
                     <section class="row row-eq-height no-gutter">
-                        <div class="col-xs-12 col-sm-8"></div>
-                        <div class="double col-xs-12 col-sm-4">
+                        <div class="double col-xs-12 col-sm-offset-8 col-sm-4">
                             <div class="grid_item directions"></div>
-                            <div class="grid_item milestone"></div>
+                            <div class="grid_item milestone">
+                                <p class="text-right">Fugit possimus officia ipsum quaerat reiciendis placeat illum aperiam dolores!</p>
+                            </div>
                         </div>
                     </section>
                     <section class="row row-eq-height no-gutter">
-                        <div class="col-xs-12 col-sm-4">
-                            <div class="grid_item shoes"></div>
+                        <div class="col-xs-12 col-sm-4 grid_item shoes">
+                            <p>Fugit possimus officia ipsum quaerat reiciendis placeat illum aperiam dolores!</p>
                         </div>
-                        <div class="col-xs-12 col-sm-8">
-                            <div class="grid_item map"></div>
+                        <div class="col-xs-12 col-sm-8 grid_item map">
+                            <p>Molestiae esse, error ad incidunt impedit corporis doloremque deserunt dignissimos, voluptates blanditiis. Fugit possimus officia ipsum quaerat reiciendis placeat illum aperiam dolores!</p>
                         </div>
                     </section>
                 </div>
@@ -101,7 +106,7 @@
                         Bananaaaa ti aamoo! Poopayee. Elit tempor bee do bee do bee do belloo! Minim adipisicing. Incididunt ut exercitation tempor veniam la bodaaa et adipisicing wiiiii daa incididunt.</p>
                 </div>
                 <div class="col-xs-12 col-sm-6">
-                    <img class="img-fluid center-block" src="img/holiday.png" alt="">
+                    <img class="img-fluid center-block" src="img/boat_narrow.png" alt="boat_narrow" srcset="img/boat_narrow.png 1x, img/boat_narrow@2x.png 2x">
                 </div>
             </div>
         </div>
@@ -119,39 +124,38 @@
             <div class="row">
                 <div id="honeycomb" class="col-xs-12 text-center">
                     <div class="hexagon">
-                        <div class="hexLayer2">
-                            <img class="img-fluid center-block" src="img/git.png" alt="">
-                        </div>
+                        <a target="_blank" href="http://git-scm.com/" class="hexLayer2">
+                            <img class="img-fluid center-block" src="img/git.png" alt="git">
+                        </a>
                     </div>
                     <div class="hexagon">
-                        <div class="hexLayer2">
-                            <img class="img-fluid center-block" src="img/grunt.png" alt="">
-                        </div>
+                        <a target="_blank" href="http://gruntjs.com/" class="hexLayer2">
+                            <img class="img-fluid center-block" src="img/grunt.png" alt="grunt">
+                        </a>
                     </div>
                     <div class="hexagon">
-                        <div class="hexLayer2">
-                            <img class="img-fluid center-block" src="img/excel.png" alt="">
-                        </div>
+                        <a target="_blank" href="https://products.office.com/fr-fr/excel" class="hexLayer2">
+                            <img class="img-fluid center-block" src="img/excel.png" alt="excel">
+                        </a>
                     </div>
                     <div class="hexagon">
-                        <div class="hexLayer2">
-                            <img class="img-fluid center-block" src="img/photoshop.png" alt="">
-                        </div>
+                        <a target="_blank" href="www.adobe.com/fr/products/photoshop.html" class="hexLayer2">
+                            <img class="img-fluid center-block" src="img/photoshop.png" alt="photoshop">
+                        </a>
                     </div>
                     <div class="hexagon">
-                        <div class="hexLayer2">
-                            <img class="img-fluid center-block" src="img/js.png" alt="">
-                        </div>
+                        <a target="_blank" href="https://developer.mozilla.org/fr/docs/Web/JavaScript" class="hexLayer2">
+                            <img class="img-fluid center-block" src="img/js.png" alt="js">
+                        </a>
                     </div>
                     <div class="hexagon">
-                        <div class="hexLayer2">
-                            <img class="img-fluid center-block" src="img/php.png" alt="">
-                        </div>
+                        <a target="_blank" href="https://secure.php.net/" class="hexLayer2">
+                            <img class="img-fluid center-block" src="img/php.png" alt="php">
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-
     </section>
 
     <section id="cards" class="container">
@@ -180,14 +184,13 @@
             </div>
         </div>
     </section>
-
     <section id="social" class="container">
         <div class="row no-gutter">
             <div id="social-icons" class="col-xs-12 col-sm-8 col-sm-offset-2">
-                <a href="#"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-                <a href="#"><i class="fa fa-linkedin"></i></a>
-                <a href="#"><i class="fa fa-github"></i></a>
+                <a href=""><i class="fa fa-facebook"></i></a>
+                <a href=""><i class="fa fa-twitter"></i></a>
+                <a href=""><i class="fa fa-linkedin"></i></a>
+                <a href=""><i class="fa fa-github"></i></a>
             </div>
         </div>
     </section>
@@ -196,7 +199,7 @@
         <div class="container">
             <div class="row row-eq-height">
                 <div class="col-xs-12 col-sm-6 text-justify">
-                    <h2>Call me maybe</h2>
+                    <h2>Call me, maybe?</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit corporis voluptatem adipisci natus, nam voluptatibus iusto doloribus ullam architecto, dolore maxime ipsam veniam facere in aliquam expedita rem consequatur repellendus?</p>
                     <p>Culpa iste incidunt corporis. Voluptate at asperiores doloribus, molestias nesciunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere qui velit suscipit quo, placeat inventore, non asperiores nihil dicta amet.</p>
                 </div>

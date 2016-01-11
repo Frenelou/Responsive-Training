@@ -16,7 +16,6 @@ $(".navbar-nav a[href^=#]").click(function(e) {
     }, 'slow');
 });
 
-
 function setItemsHeight(target) {
     for (var i = 0, j = arguments.length; i < j; i++) {
 
@@ -38,8 +37,6 @@ function setItemsHeight(target) {
                 'margin-right': margin_bottom / 4
             });
         } else if (arguments[i] === '#social-icons a') {
-            $(arguments[i]).css('line-height', target_width + 'px');
-        } else if (arguments[i] === '.grid_item') {
             $(arguments[i]).css('line-height', target_width + 'px');
         }
 
