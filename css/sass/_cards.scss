@@ -1,0 +1,56 @@
+#cards {
+    @media (min-width: 768px) {
+        .col-xs-12 {
+            display: -webkit-inline-flex;
+            display: -moz-inline-flex;
+            display: -ms-inline-flex;
+            display: -o-inline-flex;
+            display: inline-flex;
+            .cards {
+                width: calc((100% - 30px) / 4);
+                &:not(:last-child) {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+    @media (max-width: 767px) {
+        .cards {
+            width: 70%;
+            margin: auto 15%;
+        }
+    }
+    .cards {
+        >*:not(.illustration) {
+            padding: 0 5px;
+        }
+        .illustration {
+            background: #ffffff;
+            background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 40%, #DC290B 41%, #DC290B 55%, #ffffff 55%, #ffffff 100%);
+            background: -webkit-linear-gradient(top, #ffffff 0%,#ffffff 40%,#DC290B 41%,#DC290B 55%,#ffffff 55%,#ffffff 100%);
+            background: linear-gradient(to bottom, #ffffff 0%,#ffffff 40%,#DC290B 41%,#DC290B 55%,#ffffff 55%,#ffffff 100%);
+            filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 );
+            text-align: center;
+            width: 100%;
+            i {
+                height: 30px;
+                width: 30px;
+                border-radius: 50%;
+                background-color: #DC290B;
+                color: #fff;
+                line-height: 30px;
+            }
+        }
+        text-align: center;
+        border-radius: 5px;
+        border: 1px solid lighten($gris, 70%);
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-top: 10px;
+        -moz-box-shadow: 0 0 5px 0 lighten($gris, 70%);
+        -webkit-box-shadow: 0 0 5px 0 lighten($gris, 70%);
+        -o-box-shadow: 0 0 5px 0 lighten($gris, 70%);
+        box-shadow: 0 0 5px 0 lighten($gris, 70%);
+        filter:progid:DXImageTransform.Microsoft.Shadow(color=lighten($gris, 70%), Direction=NaN, Strength=5);
+    }
+}

@@ -1,0 +1,22 @@
+#about_me {
+    background-image: url(../img/boat_wide.png);
+    background-size: cover;
+    color: $gris;
+    img {
+        border: 10px solid #fff;
+        border-radius: 3px;
+        -moz-box-shadow: 0 0 5px 0 $gris;
+        -webkit-box-shadow: 0 0 5px 0 $gris;
+        -o-box-shadow: 0 0 5px 0 $gris;
+        box-shadow: 0 0 5px 0 $gris;
+        filter:progid:DXImageTransform.Microsoft.Shadow(color=$gris, Direction=NaN, Strength=5);
+    }
+    @media (max-width: 767px) {
+        background-image: url(../img/boat_wide-mobile.png);
+        text-align: center;
+        img {
+            max-width: 80%;
+            margin-top: 30px;
+        }
+    }
+}

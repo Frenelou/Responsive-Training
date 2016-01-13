@@ -1,0 +1,116 @@
+#intro {
+    @media (max-width: 767px) {
+        background-image: url(../img/wood-mobile.png);
+    }
+    @media (min-width: 768px) {
+        background-image: url(../img/wood.png);
+        background-size: cover;
+    }
+    color: #fff;
+    -moz-box-shadow: inset 0 10px 20px 0 #252525;
+    -webkit-box-shadow: inset 0 10px 20px 0 #252525;
+    -o-box-shadow: inset 0 10px 20px 0 #252525;
+    box-shadow: inset 0 10px 20px 0 #252525;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#252525, Direction=180, Strength=10);
+
+    #wright {
+        border-radius: 5px;
+        overflow: hidden;
+        margin-top: 20px;
+        background-color: #51748F;
+        * {
+            background-repeat: no-repeat;
+            background-size: cover;
+            &.shoes,
+            &.milestone {
+              background-size: contain;
+              background-position: center bottom;
+            }
+        }
+
+        p {
+            padding: 10%;
+        }
+        @media (max-width: 767px) {
+            margin: 0 auto;
+            width: 80%;
+
+
+        }
+        @media (min-width: 768px) {
+            background-image: url(../img/mount-mckinley.png);
+            background-size: cover;
+            height: 1000px;
+            .clearfix::before,
+            .clearfix::after,
+            .container::before,
+            .container::after,
+            .container-fluid::before,
+            .container-fluid::after,
+            .row::before,
+            .row::after, {
+              content: none;
+              display: block;
+            }
+            #grid {
+                height: 100%;
+                overflow: hidden;
+                section.row {
+                    width: 100%;
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                    &:not(:last-child) {
+                        height: calc((100% / 5) * 2);
+                    }
+                    &:last-child {
+                        height: calc( 100% / 5);
+                    }
+                    &:nth-child(2) {
+                        border: 10px solid #fff;
+                        border-width: 10px 0 10px 0;
+                    }
+                    >div {
+                        &:first-child:not(.col-sm-offset-8) {
+                            border-right: 10px solid #fff;
+                        }
+                        &.col-sm-offset-8{
+                          border-left: 10px solid #fff;
+                        }
+                        div:not(.milestone) {
+                            background-size: cover;
+                        }
+                        &.double div {
+                            height: 50%;
+                            &:first-child {
+                                border-bottom: 10px solid #fff;
+                            }
+                        }
+                        &:not(.double)>div {
+                            height: 100%;
+                        }
+                    }
+
+                }
+            }
+            //grid
+        }
+        .shoes {
+            background-image: url(../img/shoes.png);
+        }
+        .directions {
+            background-image: url(../img/directions.png);
+        }
+        .map {
+            background-image: url(../img/map.png);
+        }
+        .milestone {
+            background-image: url(../img/milestone.png);
+        }
+        .hat {
+            background-image: url(../img/hat.png);
+        }
+
+    }
+
+}

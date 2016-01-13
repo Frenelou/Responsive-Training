@@ -1,0 +1,27 @@
+footer {
+    background-color: $gris;
+    color: $texte_gris;
+    .form-group {
+        margin: 0;
+        #textareaLabel {
+            padding-top: 20px;
+            font-family: "Roboto","Noto",sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+        }
+        textarea {
+            width: 100%;
+            background-color: $texte_gris;
+            border-radius: 3px;
+            border: none;
+            margin-bottom: 20px;
+        }
+        .paper-input-container-0 .input-content.paper-input-container input,
+        .paper-input-container-0 .input-content.paper-input-container textarea,
+        .paper-input-container-0 .input-content.paper-input-container iron-autogrow-textarea,
+        .paper-input-container-0 .input-content.paper-input-container .paper-input-input {
+            color: #fff;
+        }
+    }
+}
