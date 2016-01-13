@@ -21,6 +21,11 @@
         * {
             background-repeat: no-repeat;
             background-size: cover;
+            &.shoes,
+            &.milestone {
+              background-size: contain;
+              background-position: center bottom;
+            }
         }
 
         p {
@@ -85,11 +90,7 @@
                             height: 100%;
                         }
                     }
-                    .grid_item.shoes,
-                    .milestone {
-                      background-size: contain;
-                      background-position: center bottom;
-                    }
+
                 }
             }
             //grid

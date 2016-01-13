@@ -12,8 +12,7 @@ $udacity: #ff9528;
 @import 'social';
 @import 'footer';
 
-body {
-    padding-top: 70px;
+    body{padding-top: 70px;}
     .no-gutter > [class*='col-'] {
       padding-right: 0;
       padding-left: 0;
@@ -22,7 +21,7 @@ body {
     >*>.container {
         max-width: 800px;
     }
-    
+
     >section>.container,
     section.container,
     footer {
@@ -49,5 +48,3 @@ body {
         align-items: center;
       }
     }
-}
-//body
